@@ -38,7 +38,7 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    margin: 0 15px; /* Essaie 8px ou 10px au lieu de 15px */
+    margin: 0 20px; /* Essaie 8px ou 10px au lieu de 15px */
     padding: 5px 0;
     transition: color 0.3s;
 }
