@@ -35,9 +35,11 @@ nav {
 
 /* Liens */
 nav a {
-    /* ... vos styles actuels ... */
-    margin: 0 10px; /* Réduire la marge */
-    padding: 5px 5px; /* Ajouter un padding pour augmenter la zone cliquable */
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    padding: 5px 0;
+    transition: color 0.3s;
 }
 
 nav a.active {
