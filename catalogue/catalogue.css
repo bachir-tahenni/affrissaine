@@ -10,12 +10,11 @@ body {
 }
 
 header {
-    position: relative;      /* Permet au nav d'être centré indépendamment */
+    /* ... */
     display: flex;
     align-items: center;
     padding: 15px 50px;
-    background-color: #fff;
-    font-size: 1.1em;
+    /* ... */
 }
 
 /* Logo collé à gauche */
