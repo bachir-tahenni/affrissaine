@@ -10,7 +10,6 @@ body {
 }
 
 header {
-    justify-content: space-between;
     position: relative;      /* Permet au nav d'être centré indépendamment */
     display: flex;
     align-items: center;
