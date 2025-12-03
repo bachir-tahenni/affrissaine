@@ -29,19 +29,17 @@ header {
 
 /* Nav centré par rapport à son propre centre */
 nav {
-    position: absolute; /* Change sticky par absolute */
+    position: absolute; /* Ou 'sticky' comme sur Accueil si vous voulez l'effet sticky */
     left: 50%;
-    top: 50%; /* Ajout pour centrer verticalement aussi */
-    transform: translate(-50%, -50%); /* Ajustement pour centrage X et Y */
+    transform: translateX(-50%); /* Applique le décalage de -50% seulement sur l'axe X */
     display: flex;
-
 }
 
 /* Liens */
 nav a {
     text-decoration: none;
     color: black;
-    margin: 0 10px; /* Essaie 8px ou 10px au lieu de 15px */
+    margin: 0 15px; /* Essaie 8px ou 10px au lieu de 15px */
     padding: 5px 0;
     transition: color 0.3s;
 }
