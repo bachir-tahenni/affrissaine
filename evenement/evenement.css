@@ -5,10 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* --- Style général pour le Header et le Main (à adapter si nécessaire) --- */
 header {
-    position: relative;
+    position: relative;      /* Permet au nav d'être centré indépendamment */
     display: flex;
     align-items: center;
     padding: 15px 50px;
@@ -16,8 +15,6 @@ header {
     background-color: #fff;
     font-size: 1.1em;
     font-family: Arial, sans-serif;
-    /* Assure que le header prend toute la largeur et gère le centrage */
-    width: 100%;
 }
 
 /* Logo collé à gauche */
@@ -29,9 +26,7 @@ header {
 
 /* Nav centré par rapport à son propre centre */
 nav {
-    /* Le positionnement sticky/fixed peut causer des problèmes sur les petits écrans */
-    /* On utilise la flexbox pour centrer au mieux dans le header */
-    position: absolute; /* Remplacer sticky pour éviter les problèmes de contexte */
+    position: sticky;
     left: 50%;
     transform: translateX(-50%); /* Centre parfait */
     display: flex;
@@ -44,8 +39,6 @@ nav a {
     margin: 0 15px;
     padding: 5px 0;
     transition: color 0.3s;
-    /* Gérer la non-sécabilité pour les petits écrans */
-    white-space: nowrap;
 }
 
 nav a.active {
@@ -56,8 +49,9 @@ nav a.active {
 
 main {
     padding: 40px 20px;
-    max-width: 1000px;
+    max-width: 1000px; /* Limiter la largeur comme pour votre catalogue */
     margin: 0 auto;
+
 }
 
 /* Style du titre H2 "Evenements" */
@@ -77,7 +71,7 @@ main h2 {
     align-items: center;
     gap: 50px;
     max-width: 900px;
-    margin: 0 auto 30px auto; /* Ajout d'une marge en bas pour séparer les cartes */
+    margin: 0 auto;
     padding: 40px;
     background-color: white;
     box-shadow: 0 4px 15px green;
@@ -92,13 +86,14 @@ main h2 {
     font-size: 0.9em;
     color: #666;
     margin-bottom: 5px;
+    /* Le petit point à gauche de la date sur la maquette */
     position: relative;
     padding-left: 15px;
 }
 
 .evenement-date-heure::before {
-    content: "•";
-    color: green;
+    content: "•"; /* Utiliser un point ou une petite icône */
+    color: green; /* Couleur du point dans la maquette */
     font-size: 1.5em;
     line-height: 0;
     position: absolute;
@@ -106,11 +101,14 @@ main h2 {
     top: 50%;
     transform: translateY(-50%);
 }
+.evenement-action {
+    box-shadow: 0 4px 15px orange;
 
+}
 .evenement-details h3 {
     font-size: 1.5em;
     margin: 0 0 15px 0;
-    font-weight: normal;
+    font-weight: normal; /* Les titres semblent moins gras sur la maquette */
 }
 
 .evenement-lieu-places {
@@ -121,12 +119,12 @@ main h2 {
 }
 
 .evenement-lieu-places .lieu {
-    color: green;
+    color: green; /* Le texte Lieu à définir semble vert sur la maquette */
 }
 
 .evenement-lieu-places i {
     margin-right: 5px;
-    color: #888;
+    color: #888; /* Couleur des icônes */
 }
 
 /* --- Barre de progression --- */
@@ -135,7 +133,7 @@ main h2 {
     background-color: #e0e0e0;
     border-radius: 3px;
     width: 100%;
-    max-width: 350px;
+    max-width: 350px; /* Limiter la longueur de la barre si besoin */
 }
 
 .progression-remplissage {
@@ -147,19 +145,13 @@ main h2 {
 
 /* Pour le cas où l'événement est complet */
 .progression-remplissage.complet {
-    background-color: #888;
+    background-color: #888; /* Optionnel : changer la couleur si complet */
 }
 
 /* --- Bouton S'inscrire --- */
 .evenement-action {
     margin-left: 30px;
-    /* Retiré le box-shadow ici pour le laisser uniquement au bouton */
-    box-shadow: none;
-    /* Pour le centrage vertical dans la carte */
-    align-self: center;
-    flex-shrink: 0; /* Empêche le rétrécissement du bouton */
 }
-
 .boutonsinscriredesactive:not(.bouton-sinscrire) {
     color: white;
     padding: 10px 25px;
@@ -172,7 +164,6 @@ main h2 {
     background-color: #888;
     cursor: not-allowed;
 }
-
 .bouton-sinscrire {
     background-color: black;
     color: white;
@@ -184,8 +175,6 @@ main h2 {
     transition: background-color 0.2s;
     box-shadow: 0 4px 15px orange;
 }
-
-/* --- Footer --- */
 footer {
     background-color: #f9f9f9;
     color: #333;
@@ -194,7 +183,6 @@ footer {
     border-top: 1px solid #eee;
     text-align: center;
 }
-
 .footer-bottom {
     border-top: 1px solid #ddd;
     padding-top: 20px;
@@ -211,116 +199,4 @@ footer {
 
 .footer-links a:hover {
     color: orange;
-}
-
-/* ======================================================= */
-/* ====== MEDIA QUERIES pour la Responsivité (Mobile) ====== */
-/* ======================================================= */
-
-/* Pour les écrans de taille moyenne (ex: tablettes en mode paysage, grands mobiles) */
-@media (max-width: 900px) {
-    /* Header: Réduire le padding */
-    header {
-        padding: 15px 20px;
-    }
-
-    /* Navigation: Les liens peuvent commencer à se chevaucher */
-    nav {
-        font-size: 0.9em;
-    }
-    
-    nav a {
-        margin: 0 10px;
-    }
-
-    /* Cartes d'événements: Les aligner au centre sans décalage horizontal */
-    .evenement-carte {
-        gap: 30px;
-        padding: 25px;
-        max-width: 700px;
-    }
-    
-    .evenement-details h3 {
-        font-size: 1.3em;
-    }
-
-    .evenement-action {
-        margin-left: 20px;
-    }
-    
-}
-
-/* Pour les petits écrans (ex: téléphones mobiles) */
-@media (max-width: 650px) {
-    /* Header: Passage en colonne pour éviter l'écrasement des éléments */
-    header {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 10px;
-        font-size: 1em;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    /* Navigation: Passage de la navigation sous le logo */
-    nav {
-        position: static; /* Retire le positionnement absolu */
-        transform: none;
-        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
-        justify-content: center; /* Centrer les liens */
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    nav a {
-        margin: 5px 8px; /* Plus petit espacement et padding */
-        padding: 2px 0;
-        font-size: 0.85em;
-    }
-
-    /* Main: Ajuster le padding */
-    main {
-        padding: 20px 10px;
-    }
-
-    /* Cartes d'événements: Passage en mode vertical (colonne) */
-    .evenement-carte {
-        flex-direction: column;
-        align-items: flex-start; /* Aligner les détails à gauche */
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .evenement-details {
-        width: 100%; /* Occuper toute la largeur disponible */
-    }
-
-    .evenement-lieu-places {
-        flex-direction: column; /* Mettre Lieu et Places l'un sous l'autre */
-        gap: 5px;
-    }
-    
-    .progression-barre {
-        max-width: none; /* La barre s'étend sur toute la largeur des détails */
-    }
-
-    /* Bouton d'action: Le centrer après les détails */
-    .evenement-action {
-        margin-left: 0;
-        width: 100%; /* Le bouton prend toute la largeur */
-        text-align: center; /* Centre le bouton */
-    }
-    
-    .bouton-sinscrire, .boutonsinscriredesactive:not(.bouton-sinscrire) {
-        width: 100%; /* Le bouton remplit la largeur de l'action */
-        box-sizing: border-box; /* Inclusion du padding dans la largeur */
-    }
-
-    /* Footer: Espacement des liens */
-    .footer-links a {
-        display: block; /* Mettre chaque lien sur une nouvelle ligne */
-        margin: 5px 0;
-    }
 }
