@@ -17,23 +17,17 @@ header {
     font-size: 1.1em;
     justify-content: space-between; 
 }
-
-/* Logo collé à gauche */
 .logo img {
     height: 60px;
     width: 249px;
     display: block;
 }
-
-/* Nav centré par rapport à son propre centre */
 nav {
-    position: absolute; /* Ou 'sticky' comme sur Accueil si vous voulez l'effet sticky */
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Applique le décalage de -50% seulement sur l'axe X */
+    transform: translateX(-50%); 
     display: flex;
 }
-
-/* Liens */
 nav a {
     text-decoration: none;
     color: black;
@@ -41,20 +35,19 @@ nav a {
     padding: 5px 0;
     transition: color 0.3s;
 }
-
 nav a.active {
     font-weight: bold;
     border-bottom: 2px solid black;
 }
 .btn-devis {
-    background-color: #000000; /* Fond Noir */
-    color: #ffffff;            /* Texte Blanc */
-    padding: 10px 20px;        /* Espace intérieur pour faire un bouton */
-    border-radius: 5px;        /* Coins légèrement arrondis */
-    text-decoration: none;     /* Pas de soulignement */
+    background-color: #000000;
+    color: #ffffff;            
+    padding: 10px 20px;       
+    border-radius: 5px;       
+    text-decoration: none;     
     font-weight: bold;
-    margin-left: 20px;         /* Espace pour le séparer des autres liens */
-    transition: 0.3s;          /* Animation douce */
+    margin-left: 20px;         
+    transition: 0.3s;          
 }
 
 /* Effet au survol (devient gris foncé) */
@@ -67,7 +60,6 @@ nav a.active {
 main {
     text-align: center;
     padding: 40px 20px;
-    /* Remember to link the font in your HTML if using this custom font */
     font-family: "Noto Sans Tifinagh Rhissa Ixa";
     margin: 0 auto;
 }
@@ -86,11 +78,9 @@ main h2 {
     align-items: center;
     gap: 50px;
     max-width: 900px;
-    margin: 0 auto 50px auto; /* Added margin-bottom to separate cards (replaces <br>) */
     padding: 40px;
     background-color: white;
-    /* Changed shadow from 'green' to the orange/amber color for consistency */
-    box-shadow: 0 4px 15px green;
+    box-shadow: #42ae5c;
     border-radius: 10px;
 }
 
@@ -163,7 +153,7 @@ main h2 {
     letter-spacing: 0.5px;
     transition: background-color 0.3s;
     border-radius:6px;
-    box-shadow: 0 4px 15px orange;
+    box-shadow: #dec22c;
 }
 
 
@@ -190,7 +180,7 @@ main h2 {
     font-size: 1em;
     letter-spacing: 0.5px;
     border-radius:6px;
-    box-shadow: 0 4px 15px orange;
+    box-shadow: #dec22c;
     margin-right: 30px;
 
 }
@@ -206,7 +196,7 @@ main h2 {
     letter-spacing: 0.5px;
     transition: background-color 0.3s;
     border-radius:6px;
-    box-shadow: 0 4px 15px orange;
+    box-shadow: #dec22c;
 }
 footer {
     background-color: #f9f9f9;
