@@ -12,10 +12,8 @@ body {
     margin: 0;
 }
 
-/* --- Header --- */
 header {
-    position: relative;      /* Permet au nav d'être centré indépendamment */
-    display: flex;
+    position: relative;     
     align-items: center;
     padding: 15px 50px;
     border-bottom: 1px solid #eee;
@@ -23,22 +21,21 @@ header {
     font-size: 1.1em;
 }
 
-/* Logo collé à gauche */
+
 .logo img {
     height: 60px;
     width: 249px;
     display: block;
 }
 
-/* Nav centré par rapport à son propre centre */
+
 nav {
     position: sticky;
     left: 50%;
-    transform: translateX(-50%); /* Centre parfait */
+    transform: translateX(-50%); 
     display: flex;
 }
 
-/* Liens */
 nav a {
     text-decoration: none;
     color: black;
@@ -79,7 +76,7 @@ div.slider img{
 }
 div.slider{
     display: flex;
-    width: calc(200px * 10); /* largeur = taille image × (nb images × 2) */
+    width: calc(200px * 10); 
     animation: scroll 20s linear infinite;
 }
 @keyframes scroll {
