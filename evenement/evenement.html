@@ -1,63 +1,85 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFRISSAINES - Contact</title>
-    <link rel="stylesheet" href="../catalogue/catalogue.css"> 
-    
-    </head>
+    <title>Afrissaines - Événements</title>
+    <link rel="stylesheet" href="evenement.css"> 
+</head>
 <body>
-<header>
+    <header>
     <div class="logo">
-        <img src="../catalogue/logoAfri.png" alt="Logo Afrissaines"> 
+        <img src="../catalogue/logoAfri.png" >
     </div>
-
     <nav>
         <a href="../index.html">Accueil</a>
         <a href="../catalogue/catalogue.html">Catalogue</a>
-        <a href="../evenement/evenement.html">Evenements</a>
-        <a href="../contact/contact.html" class="active"><b>Contact</b></a> <a href="../EnSavoirPlus/Plus.html">En savoir plus</a>
+        <a href="#" class="active"><b>Evenements</b></a>
+        <a href="../contact/contact.html">Contact</a>
+        <a href="../EnSavoirPlus/Plus.html">En savoir plus</a>
     </nav>
-    <a href="../contact/contact.html" class="btn-devis">Faire un devis</a>
 </header>
 <main>
-    <h2>Contact</h2>
-
-    <div class="produis-carte contact-card">
-        <div class="form-container">
-            <h3>Faire un devis</h3>
-            
-            <form action="#" method="POST">
-                
-                <label for="nom_prenom">Nom et Prénom :</label>
-                <input type="text" id="nom_prenom" name="nom_prenom" required>
-                
-                <label for="email">E-mail :</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="telephone">Téléphone :</label>
-                <input type="tel" id="telephone" name="telephone">
-                
-                <label for="type_evenement">Type d'événement :</label>
-                <select id="type_evenement" name="type_evenement">
-                    <option value="entreprise">Entreprise / B2B</option>
-                    <option value="particulier">Événement privé / Particulier</option>
-                    <option value="traiteur">Service Traiteur</option>
-                    <option value="autre">Autre</option>
-                </select>
-
-                <label for="details">Détails de votre demande :</label>
-                <textarea id="details" name="details" rows="6" placeholder="Décrivez votre besoin (date, nombre de personnes, produits souhaités : Bissap, Mafé, etc.)" required></textarea>
-                
-                <button type="submit" class="bouton-catalogue" style="width: 100%; margin-top: 20px;"><b>Envoyer ma demande de devis</b></button>
-            </form>
+    <h2>Evenements</h2>
+    <div class="evenement-carte">
+        <div class="evenement-details">
+            <p class="evenement-date-heure">
+                <i class="far fa-calendar-alt"></i> 2025-10-05 à 14:00
+            </p>
+            <h3>Atelier cuisine traditionnelle</h3>
+            <p class="evenement-lieu-places">
+                <span class="lieu"><i class="fas fa-map-marker-alt"></i> Lieu à définir</span>
+                <span class="places"><i class="fas fa-users"></i> 12/15 places</span>
+            </p>
+            <div class="progression-barre">
+                <div class="progression-remplissage" style="width: 80%;"></div> </div>
+        </div>
+        <div class="evenement-action">
+            <a href="#" class="bouton-sinscrire">S'inscrire</a>
         </div>
     </div>
-    
     <br>
-    
-    </main>
+    <br>
+    <div class="evenement-carte">
+        <div class="evenement-details">
+            <p class="evenement-date-heure">
+                <i class="far fa-calendar-alt"></i> 2025-10-08 à 18:30
+            </p>
+            <h3>Atelier cuisine pour les enfants</h3>
+            <p class="evenement-lieu-places">
+                <span class="lieu"><i class="fas fa-map-marker-alt"></i> Salle de dégustation</span>
+                <span class="places"><i class="fas fa-users"></i> 8/20 places</span>
+            </p>
+            <div class="progression-barre">
+                <div class="progression-remplissage" style="width: 40%;"></div> </div>
+        </div>
+        <div class="evenement-action">
+            <a href="#" class="bouton-sinscrire">S'inscrire</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="evenement-carte">
+        <div class="evenement-details">
+            <p class="evenement-date-heure">
+                <i class="far fa-calendar-alt"></i> 2025-09-28 à 09:00
+            </p>
+            <h3>Presence sur le marche des createur</h3>
+            <p class="evenement-lieu-places">
+                <span class="lieu"><i class="fas fa-map-marker-alt"></i> Lieu à définir</span>
+                <span class="places"><i class="fas fa-users"></i> 25 limite/limite</span>
+            </p>
+            <div class="progression-barre">
+                <div class="progression-remplissage complet" style="width: 100%;"></div> </div>
+        </div>
+        <div class="evenement-action">
+            <a href="#" class="boutonsinscriredesactive">S'inscrire</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</main>
 <footer>
     <p>&copy; 2025 AFRISSAINES. Tous droits réservés.</p>
     <div class="footer-links">
