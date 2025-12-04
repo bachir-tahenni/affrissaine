@@ -70,8 +70,8 @@ main h2 {
     text-align: center;
     margin-bottom: 30px;
 }
-
-.produis-carte {
+.produis-carte, .info-comp {
+    /* Mettez ici les propriétés qui sont communes aux deux cartes */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,10 +79,11 @@ main h2 {
     max-width: 900px;
     padding: 40px;
     background-color: white;
-    box-shadow: 0px 8px 20px #42ae5c;
+    box-shadow: 0px 8px 20px #42ae5c; 
     border-radius: 10px;
-    /* Correction pour centrer la carte */
-    margin: 0 auto;
+    
+    /* Le centrage est essentiel, mais il doit être appliqué à un élément de type bloc */
+    margin: 30px auto; /* Ajoute un peu de marge verticale pour l'espacement */
 }
 
 .produis-image {
@@ -157,19 +158,6 @@ main h2 {
     box-shadow: 0px 8px 20px #dec22c;
 }
 
-
-.info-comp{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: white;
-    box-shadow: 0px 8px 20px #42ae5c;
-    border-radius: 10px;
-}
 .bouton-catalogue-infocompun{
     display: inline-flex;
     justify-content: center;
