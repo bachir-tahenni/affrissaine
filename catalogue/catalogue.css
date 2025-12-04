@@ -79,7 +79,7 @@ main h2 {
     max-width: 900px;
     padding: 40px;
     background-color: white;
-    box-shadow: #42ae5c;
+    box-shadow: 0px 8px 20px #42ae5c;
     border-radius: 10px;
 }
 
@@ -152,7 +152,7 @@ main h2 {
     letter-spacing: 0.5px;
     transition: background-color 0.3s;
     border-radius:6px;
-    box-shadow: #dec22c;
+    box-shadow: 0px 8px 20px #dec22c;
 }
 
 
@@ -165,7 +165,7 @@ main h2 {
     margin: 0 auto;
     padding: 40px;
     background-color: white;
-    box-shadow: #42ae5c;
+    box-shadow: 0px 8px 20px #42ae5c;
     border-radius: 10px;
 }
 .bouton-catalogue-infocompun{
@@ -179,7 +179,7 @@ main h2 {
     font-size: 1em;
     letter-spacing: 0.5px;
     border-radius:6px;
-    box-shadow: #dec22c;
+    box-shadow: 0px 8px 20px #dec22c;
     margin-right: 30px;
 
 }
@@ -195,7 +195,7 @@ main h2 {
     letter-spacing: 0.5px;
     transition: background-color 0.3s;
     border-radius:6px;
-    box-shadow: #dec22c;
+    box-shadow: 0px 8px 20px #dec22c;
 }
 footer {
     background-color: #f9f9f9;
