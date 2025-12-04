@@ -166,7 +166,7 @@ main h2 {
     margin: 0 auto;
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px green;
+    box-shadow: #42ae5c;
     border-radius: 10px;
 }
 .bouton-catalogue-infocompun{
