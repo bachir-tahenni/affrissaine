@@ -213,3 +213,22 @@ footer {
 .footer-links a:hover {
     color: orange;
 }
+@media (max-width: 768px) {
+    .contact-details-grid {
+        flex-direction: column; /* Empile les colonnes sur mobile */
+        gap: 30px;
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    
+    nav {
+        position: static;
+        transform: none;
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
