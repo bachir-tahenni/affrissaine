@@ -15,7 +15,7 @@ header {
     padding: 15px 50px;
     background-color: #fff;
     font-size: 1.1em;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 .logo img {
     height: 60px;
@@ -25,7 +25,7 @@ header {
 nav {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     display: flex;
 }
 nav a {
@@ -41,13 +41,13 @@ nav a.active {
 }
 .btn-devis {
     background-color: #000000;
-    color: #ffffff;            
-    padding: 10px 20px;       
-    border-radius: 5px;       
-    text-decoration: none;     
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
-    margin-left: 20px;         
-    transition: 0.3s;          
+    margin-left: 20px;
+    transition: 0.3s;
 }
 
 .btn-devis:hover {
@@ -81,6 +81,8 @@ main h2 {
     background-color: white;
     box-shadow: 0px 8px 20px #42ae5c;
     border-radius: 10px;
+    /* Correction pour centrer la carte */
+    margin: 0 auto;
 }
 
 .produis-image {
