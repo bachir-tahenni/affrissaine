@@ -4,17 +4,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Application de la police de base à tous les éléments */
 }
-/* --- Style général pour le Header et le Main (à adapter si nécessaire) --- */
+
+/* --- Style général pour le Header et le Main --- */
 header {
-    position: relative;      /* Permet au nav d'être centré indépendamment */
+    position: relative;
     display: flex;
     align-items: center;
     padding: 15px 50px;
     border-bottom: 1px solid #eee;
     background-color: #fff;
     font-size: 1.1em;
-    font-family: Arial, sans-serif;
+    justify-content: space-between; /* Assure que le contenu est bien réparti si vous ajoutez un bouton */
 }
 
 /* Logo collé à gauche */
@@ -26,7 +28,7 @@ header {
 
 /* Nav centré par rapport à son propre centre */
 nav {
-    position: sticky;
+    position: absolute; /* Remplacer sticky par absolute pour fonctionner correctement avec header position: relative */
     left: 50%;
     transform: translateX(-50%); /* Centre parfait */
     display: flex;
@@ -46,12 +48,10 @@ nav a.active {
     border-bottom: 2px solid black;
 }
 
-
 main {
     padding: 40px 20px;
-    max-width: 1000px; /* Limiter la largeur comme pour votre catalogue */
+    max-width: 1000px;
     margin: 0 auto;
-
 }
 
 /* Style du titre H2 "Evenements" */
@@ -67,33 +67,33 @@ main h2 {
 
 .evenement-carte {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Utiliser space-between pour séparer les détails et le bouton */
     align-items: center;
     gap: 50px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto; /* Ajout d'une marge auto pour le centrage */
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px green;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.4); /* Opacité réduite pour un effet plus doux */
     border-radius: 10px;
 }
 
 .evenement-details {
     flex-grow: 1;
+    /* Pour s'assurer que les détails prennent de la place */
 }
 
 .evenement-date-heure {
     font-size: 0.9em;
     color: #666;
     margin-bottom: 5px;
-    /* Le petit point à gauche de la date sur la maquette */
     position: relative;
     padding-left: 15px;
 }
 
 .evenement-date-heure::before {
-    content: "•"; /* Utiliser un point ou une petite icône */
-    color: green; /* Couleur du point dans la maquette */
+    content: "•";
+    color: green;
     font-size: 1.5em;
     line-height: 0;
     position: absolute;
@@ -101,30 +101,28 @@ main h2 {
     top: 50%;
     transform: translateY(-50%);
 }
-.evenement-action {
-    box-shadow: 0 4px 15px orange;
 
-}
 .evenement-details h3 {
     font-size: 1.5em;
     margin: 0 0 15px 0;
-    font-weight: normal; /* Les titres semblent moins gras sur la maquette */
+    font-weight: normal;
 }
 
 .evenement-lieu-places {
     display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur mobile */
     gap: 20px;
     font-size: 0.9em;
     margin-bottom: 10px;
 }
 
 .evenement-lieu-places .lieu {
-    color: green; /* Le texte Lieu à définir semble vert sur la maquette */
+    color: green;
 }
 
 .evenement-lieu-places i {
     margin-right: 5px;
-    color: #888; /* Couleur des icônes */
+    color: #888;
 }
 
 /* --- Barre de progression --- */
@@ -133,70 +131,11 @@ main h2 {
     background-color: #e0e0e0;
     border-radius: 3px;
     width: 100%;
-    max-width: 350px; /* Limiter la longueur de la barre si besoin */
+    max-width: 350px;
+    margin-top: 15px; /* Ajout d'un espacement */
 }
 
 .progression-remplissage {
     height: 100%;
     background-color: green;
-    border-radius: 3px;
-    transition: width 0.3s ease-in-out;
-}
-
-/* Pour le cas où l'événement est complet */
-.progression-remplissage.complet {
-    background-color: #888; /* Optionnel : changer la couleur si complet */
-}
-
-/* --- Bouton S'inscrire --- */
-.evenement-action {
-    margin-left: 30px;
-}
-.boutonsinscriredesactive:not(.bouton-sinscrire) {
-    color: white;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.2s;
-    box-shadow: none;
-    background-color: #888;
-    cursor: not-allowed;
-}
-.bouton-sinscrire {
-    background-color: black;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.2s;
-    box-shadow: 0 4px 15px orange;
-}
-footer {
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 40px 20px;
-    margin-top: 50px;
-    border-top: 1px solid #eee;
-    text-align: center;
-}
-.footer-bottom {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-links a {
-    color: #555;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-links a:hover {
-    color: orange;
-}
+    border-radius:
