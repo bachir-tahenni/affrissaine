@@ -1,11 +1,13 @@
 /* Fichier: evenements.css */
 
+/* --- Réinitialisation --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* --- Style général pour le Header et le Main (à adapter si nécessaire) --- */
+
+/* --- Style général pour le Header et le Main --- */
 header {
     position: relative;
     display: flex;
@@ -15,8 +17,7 @@ header {
     background-color: #fff;
     font-size: 1.1em;
     font-family: Arial, sans-serif;
-    /* Ajout: Permet de contrôler le logo et la nav sur desktop */
-    justify-content: space-between;
+    justify-content: space-between; /* Permet de contrôler le logo et la nav sur desktop */
 }
 
 /* Logo collé à gauche */
@@ -28,13 +29,13 @@ header {
 
 /* Nav centré par rapport à son propre centre */
 nav {
-    position: absolute; /* Changé de sticky à absolute pour le centrage initial */
+    position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Centre parfait */
     display: flex;
 }
 
-/* Liens */
+/* Liens de navigation */
 nav a {
     text-decoration: none;
     color: black;
@@ -48,12 +49,12 @@ nav a.active {
     border-bottom: 2px solid black;
 }
 
-
+/* Contenu principal */
 main {
     padding: 40px 20px;
-    max-width: 1000px; /* Limiter la largeur comme pour votre catalogue */
+    max-width: 1000px;
     margin: 0 auto;
-
+    font-family: Arial, sans-serif; /* Assurer la police pour le main également */
 }
 
 /* Style du titre H2 "Evenements" */
@@ -64,7 +65,6 @@ main h2 {
     margin-bottom: 30px;
 }
 
-
 /* --- Style des cartes d'événements --- */
 
 .evenement-carte {
@@ -73,10 +73,10 @@ main h2 {
     align-items: center;
     gap: 50px;
     max-width: 900px;
-    margin: 20px auto; /* Ajout d'une marge auto verticale pour séparer les cartes */
+    margin: 20px auto;
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px green;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2); /* Ombre verte plus discrète */
     border-radius: 10px;
 }
 
@@ -88,87 +88,3 @@ main h2 {
     font-size: 0.9em;
     color: #666;
     margin-bottom: 5px;
-    /* Le petit point à gauche de la date sur la maquette */
-    position: relative;
-    padding-left: 15px;
-}
-
-.evenement-date-heure::before {
-    content: "•"; /* Utiliser un point ou une petite icône */
-    color: green; /* Couleur du point dans la maquette */
-    font-size: 1.5em;
-    line-height: 0;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.evenement-action {
-    box-shadow: 0 4px 15px orange;
-
-}
-.evenement-details h3 {
-    font-size: 1.5em;
-    margin: 0 0 15px 0;
-    font-weight: normal; /* Les titres semblent moins gras sur la maquette */
-}
-
-.evenement-lieu-places {
-    display: flex;
-    gap: 20px;
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
-
-.evenement-lieu-places .lieu {
-    color: green; /* Le texte Lieu à définir semble vert sur la maquette */
-}
-
-.evenement-lieu-places i {
-    margin-right: 5px;
-    color: #888; /* Couleur des icônes */
-}
-
-/* --- Barre de progression --- */
-.progression-barre {
-    height: 6px;
-    background-color: #e0e0e0;
-    border-radius: 3px;
-    width: 100%;
-    max-width: 350px; /* Limiter la longueur de la barre si besoin */
-}
-
-.progression-remplissage {
-    height: 100%;
-    background-color: green;
-    border-radius: 3px
-}
-.bouton-sinscrire{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 20px #dec22c; 
-    transition: background-color 0.3s;
-    
-}
-.boutonsinscriredesactive{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 20px #dec22c; 
-    transition: background-color 0.3s;
-}
