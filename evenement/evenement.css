@@ -17,7 +17,7 @@ header {
     background-color: #fff;
     font-size: 1.1em;
     font-family: Arial, sans-serif;
-    justify-content: space-between; /* Permet de contrôler le logo et la nav sur desktop */
+    justify-content: space-between;
 }
 
 /* Logo collé à gauche */
@@ -31,7 +31,7 @@ header {
 nav {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Centre parfait */
+    transform: translateX(-50%);
     display: flex;
 }
 
@@ -54,7 +54,7 @@ main {
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
-    font-family: Arial, sans-serif; /* Assurer la police pour le main également */
+    font-family: Arial, sans-serif;
 }
 
 /* Style du titre H2 "Evenements" */
@@ -76,7 +76,7 @@ main h2 {
     margin: 20px auto;
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2); /* Ombre verte plus discrète */
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.2); /* Ombre verte discrète */
     border-radius: 10px;
 }
 
@@ -88,3 +88,91 @@ main h2 {
     font-size: 0.9em;
     color: #666;
     margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Point décoratif devant la date */
+.evenement-date-heure::before {
+    content: "•";
+    color: green;
+    font-size: 1.5em;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.evenement-details h3 {
+    font-size: 1.5em;
+    margin: 0 0 15px 0;
+    font-weight: normal;
+}
+
+.evenement-lieu-places {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.evenement-lieu-places .lieu {
+    color: green;
+}
+
+.evenement-lieu-places i {
+    margin-right: 5px;
+    color: #888;
+}
+
+/* --- Barre de progression --- */
+.progression-barre {
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.progression-remplissage {
+    height: 100%;
+    background-color: green;
+    border-radius: 3px;
+}
+
+/* --- Bouton S'inscrire (Actif) --- */
+.bouton-sinscrire {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 20px rgba(222, 194, 44, 0.7);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* --- Bouton S'inscrire (Désactivé) - CORRECTION APPLIQUÉE --- */
+.boutonsinscriredesactive {
+    /* Assure la même structure que le bouton actif */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+
+    /* Styles pour l'état désactivé */
+    background-color: #999; /* Gris neutre */
+    color: #eee; /* Texte très clair */
+    box-shadow: none; /* AUCUNE ombre vive */
+    cursor: default;
+    opacity: 0.8;
+}
