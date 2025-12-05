@@ -140,7 +140,7 @@ main h2 {
     margin: 0 auto 50px auto;
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px green;
+    box-shadow: 0 4px 15px #42ae5c;
     border-radius: 10px;
     text-align: left;
 }
@@ -191,7 +191,7 @@ main h2 {
     margin: 0 auto;
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px green;
+    box-shadow: 0 4px 15px #42ae5c;
     border-radius: 10px;
     text-align: left;
 }
@@ -224,7 +224,7 @@ main h2 {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: green;
+    border-color: #42ae5c;
 }
 
 /* BOUTON */
@@ -242,7 +242,7 @@ main h2 {
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px orange;
+    box-shadow: 0 4px 15px #dec22c;
 }
 
 .submit-button:hover {
@@ -276,7 +276,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: orange;
+    color: #dec22c;
 }
 
 /* =========================================
