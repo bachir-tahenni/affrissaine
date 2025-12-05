@@ -7,7 +7,7 @@
 }
 /* --- Style général pour le Header et le Main (à adapter si nécessaire) --- */
 header {
-    position: relative;      /* Permet au nav d'être centré indépendamment */
+    position: relative;
     display: flex;
     align-items: center;
     padding: 15px 50px;
@@ -15,6 +15,8 @@ header {
     background-color: #fff;
     font-size: 1.1em;
     font-family: Arial, sans-serif;
+    /* Ajout: Permet de contrôler le logo et la nav sur desktop */
+    justify-content: space-between;
 }
 
 /* Logo collé à gauche */
@@ -26,7 +28,7 @@ header {
 
 /* Nav centré par rapport à son propre centre */
 nav {
-    position: sticky;
+    position: absolute; /* Changé de sticky à absolute pour le centrage initial */
     left: 50%;
     transform: translateX(-50%); /* Centre parfait */
     display: flex;
@@ -71,7 +73,7 @@ main h2 {
     align-items: center;
     gap: 50px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto; /* Ajout d'une marge auto verticale pour séparer les cartes */
     padding: 40px;
     background-color: white;
     box-shadow: 0 4px 15px green;
@@ -139,64 +141,4 @@ main h2 {
 .progression-remplissage {
     height: 100%;
     background-color: green;
-    border-radius: 3px;
-    transition: width 0.3s ease-in-out;
-}
-
-/* Pour le cas où l'événement est complet */
-.progression-remplissage.complet {
-    background-color: #888; /* Optionnel : changer la couleur si complet */
-}
-
-/* --- Bouton S'inscrire --- */
-.evenement-action {
-    margin-left: 30px;
-}
-.boutonsinscriredesactive:not(.bouton-sinscrire) {
-    color: white;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.2s;
-    box-shadow: none;
-    background-color: #888;
-    cursor: not-allowed;
-}
-.bouton-sinscrire {
-    background-color: black;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.2s;
-    box-shadow: 0 4px 15px orange;
-}
-footer {
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 40px 20px;
-    margin-top: 50px;
-    border-top: 1px solid #eee;
-    text-align: center;
-}
-.footer-bottom {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-links a {
-    color: #555;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-links a:hover {
-    color: orange;
-}
+    border-radius: 3px
