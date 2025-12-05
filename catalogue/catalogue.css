@@ -8,7 +8,6 @@ body {
     line-height: 1.6;
     margin: 0;
 }
-/* --- Header --- */
 header {
     position: relative;
     display: flex;
@@ -55,13 +54,9 @@ nav a.active {
     background-color: #333333;
     color: #fff;
 }
-
-/* --- Main Content & Cards --- */
 main {
     text-align: center;
     padding: 40px 20px;
-    /* J'ai commenté la police "Noto Sans Tifinagh Rhissa Ixa" car elle peut ne pas être disponible partout */
-    /* font-family: "Noto Sans Tifinagh Rhissa Ixa"; */ 
     margin: 0 auto;
 }
 main h2 {
@@ -85,12 +80,10 @@ main h2 {
     border-radius: 10px;
     margin: 30px auto; 
 }
-/* Pour cibler spécifiquement le bloc du formulaire de contact s'il est utilisé sur la page contact */
 .contact-form-card {
-    /* Je suppose une couleur pour le formulaire de contact, comme dans l'image */
-    box-shadow: 0px 8px 20px rgba(66, 174, 92, 0.5); /* Ombre plus douce */
+    box-shadow: 0px 8px 20px rgba(66, 174, 92, 0.5); 
     border: 1px solid #42ae5c;
-    background-color: #f7fff9; /* Très léger fond vert */
+    background-color: #f7fff9; 
 }
 
 .produis-image {
