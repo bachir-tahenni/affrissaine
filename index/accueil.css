@@ -101,6 +101,6 @@ div.slider{
     letter-spacing: 0.5px;
     transition: background-color 0.3s;
     border-radius:6px;
-    box-shadow: 0 4px 15px orange;
+    box-shadow: 0 4px 15px #dec22c;
 
 }
