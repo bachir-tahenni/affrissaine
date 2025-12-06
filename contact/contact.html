@@ -5,42 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AFRISSAINES - Contact</title>
 <link rel="stylesheet" href="contact.css">
-
-<link href="contact.css" rel="stylesheet">
 </head>
 <body>
-<header>
-    <div class="logo">
+<header class="afri-entete">
+    <div class="afri-logo">
         <img src="../catalogue/img/logoAfri.png" >
     </div>
 
-    <nav>
-        <a href="../index/index.html">Accueil</a>
-        <a href="../catalogue /catalogue.html">Catalogue</a>
-        <a href="../evenement/evenement.html">Evenements</a>
-        <a href="../contact/contact.html" class="active">Contact</a>
-        <a href="../EnSavoirPlus/Plus.html">En savoir plus</a>
+    <nav class="afri-navigation">
+        <a href="../index/index.html" class="afri-lien-navigation">Accueil</a>
+        <a href="../catalogue /catalogue.html" class="afri-lien-navigation">Catalogue</a>
+        <a href="../evenement/evenement.html" class="afri-lien-navigation">Evenements</a>
+        <a href="../contact/contact.html" class="afri-lien-navigation afri-lien-actif">Contact</a>
+        <a href="../EnSavoirPlus/Plus.html" class="afri-lien-navigation">En savoir plus</a>
     </nav>
-
 </header>
 
-<main>
-<section class="contact-header">
-<h1>Contact </h1>
+<main class="afri-principal">
+<section class="afri-entete-contact">
+<h1 class="afri-titre-page">Contact </h1>
 <br>
 <br>
-<section class="contact-form-minimal">
+<section class="afri-formulaire-contact-minimal">
 <h2> Faire un devis</h2>
 <form action="#" method="POST">
-<div class="form-group">
+<div class="afri-groupe-formulaire">
 <label for="name">Nom et Prénom :</label>
 <input type="text" id="name" name="name" required>
 </div>
-<div class="form-group">
+<div class="afri-groupe-formulaire">
 <label for="email">E-mail :</label>
 <input type="email" id="email" name="email" required>
 </div>
-<div class="form-group">
+<div class="afri-groupe-formulaire">
 <label for="subject">Objet de votre demande :</label>
 <select id="subject" name="subject" required>
 <option value="" disabled selected>-- Sélectionnez un objet --</option>
@@ -51,47 +48,45 @@
 <option value="autre">Autre</option>
 </select>
 </div>
-<div class="form-group">
+<div class="afri-groupe-formulaire">
 <label for="message">Votre Message :</label>
 <textarea id="message" name="message" rows="6" required></textarea>
 </div>
-<button type="submit" class="submit-button">Envoyer le message</button>
+<button type="submit" class="afri-bouton-soumettre">Envoyer le message</button>
 </form>
 </section>
 <br>
 <br>
 </section>
-    <div class="contact-details-grid">
-        <h2 class="contact-grid-title">Nous contacter :</h2>
+    <div class="afri-grille-details-contact">
+        <h2 class="afri-titre-grille-contact">Nous contacter :</h2>
 
-        <!-- Colonne Gauche -->
-        <div class="detail-block">
-            <div class="detail-item">
-                <div class="detail-content">
+        <div class="afri-bloc-detail">
+            <div class="afri-element-detail">
+                <div class="afri-contenu-detail">
                     <h3>Téléphone</h3>
                     <p>06 27 64 33 41</p>
                 </div>
             </div>
             
-            <div class="detail-item">
-                <div class="detail-content">
+            <div class="afri-element-detail">
+                <div class="afri-contenu-detail">
                     <h3>E-mail</h3>
                     <p><a href="mailto:koumba04kn@gmail.com">koumba04kn@gmail.com</a></p>
                 </div>
             </div>
         </div>
 
-        <!-- Colonne Droite -->
-        <div class="detail-block">
-            <div class="detail-item">
-                <div class="detail-content">
+        <div class="afri-bloc-detail">
+            <div class="afri-element-detail">
+                <div class="afri-contenu-detail">
                     <h3>Instagram :</h3>
                     <p>afrissaines</p>
                 </div>
             </div>
 
-            <div class="detail-item">
-                <div class="detail-content">
+            <div class="afri-element-detail">
+                <div class="afri-contenu-detail">
                     <h3>Linkedin :</h3>
                     <p>Afrissaines</p>
                 </div>
@@ -104,9 +99,9 @@
 
 </main>
 
-<footer>
+<footer class="afri-pied-de-page">
 <p>&copy; 2025 AFRISSAINES. Tous droits réservés.</p>
-<div class="footer-links">
+<div class="afri-liens-pied-de-page">
 <a href="#">Mentions légales</a>
 <a href="#">Confidentialité</a>
 <a href="#">CGV</a>
