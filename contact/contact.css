@@ -1,6 +1,6 @@
 /* =========================================
-    1. RESET & BASE
-    ========================================= */
+   1. RESET & BASE
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -15,10 +15,10 @@ body {
 }
 
 /* =========================================
-    2. HEADER & NAV
-    ========================================= */
-.afri-header {
-    position: relative;
+   2. HEADER & NAV
+   ========================================= */
+header {
+    position: relative;      /* Permet au nav d'être centré indépendamment */
     display: flex;
     align-items: center;
     padding: 15px 50px;
@@ -28,22 +28,22 @@ body {
 }
 
 /* Logo collé à gauche */
-.afri-logo img {
+.logo img {
     height: 60px;
     width: 249px;
     display: block;
 }
 
 /* Nav centré par rapport à son propre centre */
-.afri-nav {
+nav {
     position: sticky;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centre parfait */
     display: flex;
 }
 
 /* Liens */
-.afri-nav-link {
+nav a {
     align-items: center;
     text-decoration: none;
     color: black;
@@ -52,22 +52,29 @@ body {
     transition: color 0.3s;
 }
 
-.afri-link-active {
+nav a.active {
     font-weight: bold;
     border-bottom: 2px solid black;
 }
 
+/* Logo collé à gauche */
+.logo img {
+    height: 60px;
+    width: 249px;
+    display: block;
+}
+
 /* Nav centré par rapport à son propre centre */
-.afri-nav {
-    position: relative;
+nav {
+    position: relative;      /* Permet au nav d'être centré indépendamment */
     position: sticky;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centre parfait */
     display: flex;
 }
 
 /* Liens */
-.afri-nav-link {
+nav a {
     text-decoration: none;
     color: black;
     margin: 0 15px;
@@ -75,208 +82,81 @@ body {
     transition: color 0.3s;
 }
 
-.afri-link-active {
+nav a.active {
     font-weight: bold;
     border-bottom: 2px solid black;
 }
 
 /* =========================================
-    3. MAIN & TITRES
-    ========================================= */
-.afri-main {
+   3. MAIN & TITRES
+   ========================================= */
+main {
     text-align: center;
     padding: 40px 20px;
-    font-family: "Noto Sans Tifinagh Rhissa Ixa", Arial, sans-serif;
+    font-family: "Noto Sans Tifinagh Rhissa Ixa", Arial, sans-serif; 
     margin: 0 auto;
 }
 
-.afri-main h1,
-.afri-main h2 {
+main h1, 
+main h2 {
     font-family: serif;
     font-weight: normal;
     text-align: center;
     color: black;
 }
 
-.afri-main h1 {
+main h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
 }
 
-.afri-page-title {
+main h2 {
     font-size: 2.5em;
     margin-bottom: 30px;
 }
 
-.afri-contact-header p {
+.contact-header p {
     font-size: 1.1em;
     margin-bottom: 50px;
     color: #555;
 }
 
-.afri-hidden-title {
+.hidden-title {
     display: none;
 }
 
 /* =========================================
-    4. CATALOGUE PRODUIT
-    ========================================= */
-.afri-product-card {
-    display: flex;
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: #fff;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    text-align: left;
-    overflow: hidden;
-}
-
-.afri-product-image {
-    flex: 0 0 40%;
-}
-
-.afri-product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.afri-product-details {
-    flex: 1;
-    padding: 25px;
-}
-
-.afri-product-type {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 5px;
-}
-
-.afri-product-name {
-    font-family: serif;
-    font-size: 2em;
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.afri-product-description {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.afri-product-features {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.afri-product-features li {
-    font-size: 0.95em;
-    margin-bottom: 5px;
-}
-
-/* Boutons Catalogue et Devis */
-.afri-bouton {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
-
-.afri-bouton:hover {
-    background-color: #333;
-}
-
-.afri-bouton-quote {
-    margin-left: auto;
-}
-
-.afri-bouton-catalogue {
-    background-color: #42ae5c;
-    box-shadow: 0 4px 15px #42ae5c;
-    font-weight: bold;
-}
-
-.afri-bouton-catalogue:hover {
-    background-color: #38974e;
-}
-
-.afri-info-supplementary {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px 0;
-}
-
-.afri-bouton-info-one,
-.afri-bouton-info-two {
-    padding: 15px 30px;
-    margin: 0 10px;
-}
-
-.afri-bouton-info-one {
-    background-color: #dec22c;
-    box-shadow: 0 4px 15px #dec22c;
-}
-
-.afri-bouton-info-one:hover {
-    background-color: #c9b126;
-}
-
-.afri-bouton-info-two {
-    background-color: black;
-}
-
-.afri-info-note-one,
-.afri-info-note-two {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 10px;
-}
-
-
-/* =========================================
-    5. CONTACT FORM & DETAILS
-    ========================================= */
-.afri-contact-details-grid {
+   4. SECTION INFO (MODIFIÉ POUR ALIGNEMENT GAUCHE/DROITE)
+   ========================================= */
+.contact-details-grid {
     text-align: center;
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
+    /* C'est ici que la magie opère : space-between écarte les colonnes */
+    justify-content: space-between; 
     align-items: flex-start cen;
     gap: 50px;
     max-width: 900px;
     margin: 0 auto 50px auto;
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px #42ae5c;
+    box-shadow: 0 4px 15px green;
     border-radius: 10px;
     text-align: left;
 }
-.afri-contact-grid-title{
+.contact-grid-title{
     width: 100%;
 }
-.afri-detail-block {
+/* Assure que les deux blocs (gauche et droite) prennent de la place équitablement */
+.detail-block {
     flex: 1;
 }
 
-.afri-detail-item {
+.detail-item {
     margin-bottom: 25px;
 }
 
-.afri-detail-content h3 {
+.detail-content h3 {
     font-family: serif;
     font-size: 1.3em;
     margin-bottom: 5px;
@@ -284,50 +164,53 @@ body {
     color: black;
 }
 
-.afri-detail-content p,
-.afri-detail-content a {
+.detail-content p, 
+.detail-content a {
     color: black;
     text-decoration: none;
     font-size: 1em;
 }
 
-.afri-detail-content a:hover {
+.detail-content a:hover {
     text-decoration: underline;
 }
 
-.afri-separator-vertical {
+/* Ligne de séparation (optionnelle si tu ne l'utilises plus) */
+.separator-vertical {
     width: 1px;
     background-color: #eee;
     height: 200px;
     align-self: center;
 }
 
-/* FORMULAIRE */
-.afri-contact-form {
+/* =========================================
+   5. FORMULAIRE
+   ========================================= */
+.contact-form-minimal {
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
     background-color: white;
-    box-shadow: 0 4px 15px #42ae5c;
+    box-shadow: 0 4px 15px green;
     border-radius: 10px;
     text-align: left;
 }
 
-.afri-form-group {
+.form-group {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.afri-form-group label {
+.form-group label {
     font-weight: bold;
     margin-bottom: 8px;
     color: black;
 }
 
-.afri-form-group input,
-.afri-form-group select,
-.afri-form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -337,15 +220,15 @@ body {
     width: 100%;
 }
 
-.afri-form-group input:focus,
-.afri-form-group select:focus,
-.afri-form-group textarea:focus {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
-    border-color: #42ae5c;
+    border-color: green;
 }
 
-/* BOUTON SUBMIT */
-.afri-submit-bouton {
+/* BOUTON */
+.submit-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -359,17 +242,17 @@ body {
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px #dec22c;
+    box-shadow: 0 4px 15px orange;
 }
 
-.afri-submit-bouton:hover {
+.submit-button:hover {
     background-color: #333;
 }
 
 /* =========================================
-    6. FOOTER
-    ========================================= */
-.afri-footer {
+   6. FOOTER
+   ========================================= */
+footer {
     background-color: #f9f9f9;
     color: #333;
     padding: 40px 20px;
@@ -378,7 +261,7 @@ body {
     text-align: center;
 }
 
-.afri-footer-bottom {
+.footer-bottom {
     border-top: 1px solid #ddd;
     padding-top: 20px;
     display: flex;
@@ -386,51 +269,35 @@ body {
     gap: 10px;
 }
 
-.afri-footer-links a {
+.footer-links a {
     color: #555;
     text-decoration: none;
     margin: 0 10px;
 }
 
-.afri-footer-links a:hover {
-    color: #dec22c;
+.footer-links a:hover {
+    color: orange;
 }
 
 /* =========================================
-    7. RESPONSIVE (MOBILE)
-    ========================================= */
+   7. RESPONSIVE (MOBILE)
+   ========================================= */
 @media (max-width: 768px) {
-    .afri-contact-details-grid {
-        flex-direction: column;Vous les faites seul, rapidement et discrètement. Si vous avez le temps avant que la prière obligatoire commence (l'Iqamah).
+    .contact-details-grid {
+        flex-direction: column; /* Empile les colonnes sur mobile */
         gap: 30px;
     }
     
-    .afri-header {
+    header {
         flex-direction: column;
         padding: 15px 20px;
     }
     
-    .afri-nav {
+    nav {
         position: static;
         transform: none;
         margin-top: 15px;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .afri-product-card {
-        flex-direction: column;
-    }
-
-    .afri-product-image {
-        flex: 1 1 100%;
-        max-height: 250px;
-    }
-
-    .afri-bouton-info-one,
-    .afri-bouton-info-two {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
     }
 }
