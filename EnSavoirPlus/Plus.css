@@ -33,7 +33,7 @@ header img{
 }
 
 nav {
-    position: sticky;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
