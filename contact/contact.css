@@ -1,3 +1,5 @@
+/* Fichier: evenements.css (Mis à jour avec les classes afri-françaises) */
+
 /* =========================================
     1. RESET & BASE
     ========================================= */
@@ -7,15 +9,8 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #fff;
-}
-
 /* =========================================
-    2. HEADER & NAV
+    2. ENTÊTE & NAVIGATION
     ========================================= */
 .afri-entete {
     position: relative;
@@ -25,6 +20,7 @@ body {
     border-bottom: 1px solid #eee;
     background-color: #fff;
     font-size: 1.1em;
+    font-family: Arial, sans-serif;
 }
 
 /* Logo collé à gauche */
@@ -44,7 +40,6 @@ body {
 
 /* Liens */
 .afri-lien-navigation {
-    align-items: center;
     text-decoration: none;
     color: black;
     margin: 0 15px;
@@ -57,380 +52,29 @@ body {
     border-bottom: 2px solid black;
 }
 
-/* Nav centré par rapport à son propre centre */
-.afri-navigation {
-    position: relative;
-    position: sticky;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
-
-/* Liens */
-.afri-lien-navigation {
+/* Bouton Devis/Quote (pour le dernier bouton dans le header) */
+.afri-bouton-devis {
+    background-color: black; /* Remplacer par la couleur de votre bouton de devis si elle est différente du noir */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    color: black;
-    margin: 0 15px;
-    padding: 5px 0;
-    transition: color 0.3s;
+    margin-left: auto;
+    transition: background-color 0.3s;
 }
 
-.afri-lien-actif {
-    font-weight: bold;
-    border-bottom: 2px solid black;
+.afri-bouton-devis:hover {
+    background-color: #333;
 }
+
 
 /* =========================================
-    3. MAIN & TITRES
+    3. CONTENU PRINCIPAL & TITRES
     ========================================= */
 .afri-principal {
-    text-align: center;
     padding: 40px 20px;
-    font-family: "Noto Sans Tifinagh Rhissa Ixa", Arial, sans-serif;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.afri-principal h1,
-.afri-principal h2 {
-    font-family: serif;
-    font-weight: normal;
-    text-align: center;
-    color: black;
-}
-
-.afri-principal h1 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
-}
-
-.afri-titre-page {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.afri-entete-contact p {
-    font-size: 1.1em;
-    margin-bottom: 50px;
-    color: #555;
-}
-
-.afri-titre-cache {
-    display: none;
-}
-
-/* =========================================
-    4. CATALOGUE PRODUIT
-    ========================================= */
-.afri-carte-produit {
-    display: flex;
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: #fff;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    text-align: left;
-    overflow: hidden;
-}
-
-.afri-image-produit {
-    flex: 0 0 40%;
-}
-
-.afri-image-produit img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.afri-details-produit {
-    flex: 1;
-    padding: 25px;
-}
-
-.afri-type-produit {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 5px;
-}
-
-.afri-nom-produit {
-    font-family: serif;
-    font-size: 2em;
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.afri-description-produit {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.afri-caracteristiques-produit {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.afri-caracteristiques-produit li {
-    font-size: 0.95em;
-    margin-bottom: 5px;
-}
-
-/* Boutons Catalogue et Devis */
-.afri-bouton {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
-
-.afri-bouton:hover {
-    background-color: #333;
-}
-
-.afri-bouton-devis {
-    margin-left: auto;
-}
-
-.afri-bouton-catalogue {
-    background-color: #42ae5c;
-    box-shadow: 0 4px 15px #42ae5c;
-    font-weight: bold;
-}
-
-.afri-bouton-catalogue:hover {
-    background-color: #38974e;
-}
-
-.afri-informations-supplementaires {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px 0;
-}
-
-.afri-bouton-info-un,
-.afri-bouton-info-deux {
-    padding: 15px 30px;
-    margin: 0 10px;
-}
-
-.afri-bouton-info-un {
-    background-color: #dec22c;
-    box-shadow: 0 4px 15px #dec22c;
-}
-
-.afri-bouton-info-un:hover {
-    background-color: #c9b126;
-}
-
-.afri-bouton-info-deux {
-    background-color: black;
-}
-
-.afri-note-info-un,
-.afri-note-info-deux {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 10px;
-}
-
-
-/* =========================================
-    5. FORMULAIRE DE CONTACT & DÉTAILS
-    ========================================= */
-.afri-grille-details-contact {
-    text-align: center;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start cen;
-    gap: 50px;
-    max-width: 900px;
-    margin: 0 auto 50px auto;
-    padding: 40px;
-    background-color: white;
-    box-shadow: 0 4px 15px #42ae5c;
-    border-radius: 10px;
-    text-align: left;
-}
-.afri-titre-grille-contact{
-    width: 100%;
-}
-.afri-bloc-detail {
-    flex: 1;
-}
-
-.afri-element-detail {
-    margin-bottom: 25px;
-}
-
-.afri-contenu-detail h3 {
-    font-family: serif;
-    font-size: 1.3em;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
-}
-
-.afri-contenu-detail p,
-.afri-contenu-detail a {
-    color: black;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.afri-contenu-detail a:hover {
-    text-decoration: underline;
-}
-
-.afri-separateur-vertical {
-    width: 1px;
-    background-color: #eee;
-    height: 200px;
-    align-self: center;
-}
-
-/* FORMULAIRE */
-.afri-formulaire-contact {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: white;
-    box-shadow: 0 4px 15px #42ae5c;
-    border-radius: 10px;
-    text-align: left;
-}
-
-.afri-groupe-formulaire {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.afri-groupe-formulaire label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: black;
-}
-
-.afri-groupe-formulaire input,
-.afri-groupe-formulaire select,
-.afri-groupe-formulaire textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    width: 100%;
-}
-
-.afri-groupe-formulaire input:focus,
-.afri-groupe-formulaire select:focus,
-.afri-groupe-formulaire textarea:focus {
-    outline: none;
-    border-color: #42ae5c;
-}
-
-/* BOUTON ENVOYER */
-.afri-bouton-soumettre {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 15px #dec22c;
-}
-
-.afri-bouton-soumettre:hover {
-    background-color: #333;
-}
-
-/* =========================================
-    6. FOOTER
-    ========================================= */
-.afri-pied-de-page {
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 40px 20px;
-    margin-top: 50px;
-    border-top: 1px solid #eee;
-    text-align: center;
-}
-
-.afri-bas-de-page {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.afri-liens-pied-de-page a {
-    color: #555;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.afri-liens-pied-de-page a:hover {
-    color: #dec22c;
-}
-
-/* =========================================
-    7. RESPONSIVE (MOBILE)
-    ========================================= */
-@media (max-width: 768px) {
-    .afri-grille-details-contact {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .afri-entete {
-        flex-direction: column;
-        padding: 15px 20px;
-    }
-    
-    .afri-navigation {
-        position: static;
-        transform: none;
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .afri-carte-produit {
-        flex-direction: column;
-    }
-
-    .afri-image-produit {
-        flex: 1 1 100%;
-        max-height: 250px;
-    }
-
-    .afri-bouton-info-un,
-    .afri-bouton-info-deux {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-    }
-}
+/* Style du titre
