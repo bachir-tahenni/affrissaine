@@ -1,117 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AFRISSAINES - Contact</title>
-<link rel="stylesheet" href="contact.css">
-
-<link href="contact.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrissaines - Catalogue Boissons</title>
+    <link rel="stylesheet" href="catalogue.css">
 </head>
 <body>
-<header>
-    <div class="logo">
-        <img src="../catalogue/img/logoAfri.png" >
+<header class="afri-header">
+    <div class="afri-logo">
+        <img src="logoAfri.png" alt="Logo Afrissaines">
     </div>
 
-    <nav>
-        <a href="../index.html">Accueil</a>
-        <a href="../catalogue/catalogue.html">Catalogue</a>
-        <a href="../evenement/evenement.html">Evenements</a>
-        <a href="../contact/contact.html" class="active">Contact</a>
-        <a href="../EnSavoirPlus/Plus.html">En savoir plus</a>
+    <nav class="afri-nav">
+        <a href="../index.html" class="afri-nav-link">Accueil</a>
+        <a href="../catalogue/catalogue.html" class="afri-nav-link afri-link-active"><b>Catalogue</b></a>
+        <a href="../evenement/evenement.html" class="afri-nav-link">Evenements</a>
+        <a href="../contact/contact.html" class="afri-nav-link">Contact</a>
+        <a href="../EnSavoirPlus/Plus.html" class="afri-nav-link">En savoir plus</a>
     </nav>
-
+    <a href="../contact/contact.html" class="afri-btn afri-btn-quote">Faire un devis</a>
 </header>
-
-<main>
-<section class="contact-header">
-<h1>Contact </h1>
-<br>
-<br>
-<section class="contact-form-minimal">
-<h2> Faire un devis</h2>
-<form action="#" method="POST">
-<div class="form-group">
-<label for="name">Nom et Prénom :</label>
-<input type="text" id="name" name="name" required>
-</div>
-<div class="form-group">
-<label for="email">E-mail :</label>
-<input type="email" id="email" name="email" required>
-</div>
-<div class="form-group">
-<label for="subject">Objet de votre demande :</label>
-<select id="subject" name="subject" required>
-<option value="" disabled selected>-- Sélectionnez un objet --</option>
-<option value="catalogue">Faire Une Commande</option>
-<option value="catalogue">Demande De Reservation : Ateliers </option>
-<option value="partenariat">Partenariat / Professionnel</option>
-<option value="produit">Question Produit </option>
-<option value="autre">Autre</option>
-</select>
-</div>
-<div class="form-group">
-<label for="message">Votre Message :</label>
-<textarea id="message" name="message" rows="6" required></textarea>
-</div>
-<button type="submit" class="submit-button">Envoyer le message</button>
-</form>
-</section>
-<br>
-<br>
-</section>
-    <div class="contact-details-grid">
-        <h2 class="contact-grid-title">Nous contacter :</h2>
-
-        <!-- Colonne Gauche -->
-        <div class="detail-block">
-            <div class="detail-item">
-                <div class="detail-content">
-                    <h3>Téléphone</h3>
-                    <p>06 27 64 33 41</p>
-                </div>
-            </div>
-            
-            <div class="detail-item">
-                <div class="detail-content">
-                    <h3>E-mail</h3>
-                    <p><a href="mailto:koumba04kn@gmail.com">koumba04kn@gmail.com</a></p>
-                </div>
-            </div>
+<main class="afri-main">
+    <h2 class="afri-page-title">Catalogue Des Boissons</h2>
+    
+    <div class="afri-product-card">
+        <div class="afri-product-image">
+            <img src="jusdegingembre1.jpg" alt="Le Jus De Gingembre">
         </div>
-
-        <!-- Colonne Droite -->
-        <div class="detail-block">
-            <div class="detail-item">
-                <div class="detail-content">
-                    <h3>Instagram :</h3>
-                    <p>afrissaines</p>
-                </div>
-            </div>
-
-            <div class="detail-item">
-                <div class="detail-content">
-                    <h3>Linkedin :</h3>
-                    <p>Afrissaines</p>
-                </div>
-            </div>
+        <div class="afri-product-details">
+            <p class="afri-product-type">Boissons - bouteille de 250 ml</p>
+            <h3 class="afri-product-name">Le Jus de Gingembre</h3>
+            <p class="afri-product-description">Cette boisson de 250 ml, mariant l'acidité du citron frais à la chaleur épicée du gingembre, stimule l'organisme en apportant de la vitamine C et des antioxydants, tout en offrant des propriétés anti-inflammatoires et digestives.</p>
+            <ul class="afri-product-features">
+                <li>Livraison le jour J</li>
+                <li>Preparation artisanales</li>
+                <li>Riche en nutriments</li>
+            </ul>
+            <a href="../contact/contact.html" class="afri-btn afri-btn-catalogue"><b>Ajouter Au Panier</b></a>
         </div>
-
     </div>
-</section>
-
-
-</main>
-
-<footer>
-<p>&copy; 2025 AFRISSAINES. Tous droits réservés.</p>
-<div class="footer-links">
-<a href="#">Mentions légales</a>
-<a href="#">Confidentialité</a>
-<a href="#">CGV</a>
-</div>
-</footer>
-
-</body>
-</html>
+    
+    <br> <br> <br>
+    
+    <div class="afri-product-card">
+        <div class="afri-product-image">
+            <img src="bissap.png" alt="Bissap Rouge">
+        </div>
+        <div class="afri-product-details">
+            <p class="afri-product-type">Boissons - bouteille de 250 ml</p>
+            <h3 class="afri-product-name">Bissap Rouge</h3>
+            <p class="afri-product-description">Le bissap est une infusion désaltérante de fleurs d'hibiscus et de menthe, subtilement sucrée et épicée, reconnue pour ses polyphénols antioxydants et pour aider à réguler la tension artérielle.</p>
+            <ul class="afri-product-features">
+                <li>Livraison le jour J</li>
+                <li>Preparation artisanales</li>
+                <li>Riche en vitamines</li>
+            </ul>
+            <a href="../contact/contact.html" class="afri-btn afri-btn-catalogue"><b>Ajouter Au Panier</b></a>
+        </div>
+    </div>
+    
+    <br> <br> <br>
+    
+    <div class="afri-product-card">
+        <div class="afri-product-image">
+            <img src="moringa.jpg" alt="Baobab Moringa">
+        </div>
+        <div class="afri-product-details">
+            <p class="afri-product-type">Boissons - bouteille de 250 ml</p>
+            <h3 class="afri-product-name">Baobab Moringa</h3>
+            <p class="afri-product-description">Cette boisson artisanale (250 ml) associe le moringa, riche en vitamines et minéraux, au baobab, plein de vitamine C, pour offrir un concentré rafraîchissant d'énergie qui soutient le système immunitaire.</p>
+            <ul class="afri-product-features">
+                <li>Livraison le jour J</li>
+                <li>Preparation artisanales</li>
+                <li>Riche en vitamines</li>
+            </ul>
+            <a href="../contact/contact.html" class="afri-btn afri-btn-catalogue"><b>Ajouter Au Panier</b></a>
+        </div>
+    </div>
+    
+    <br> <br> <br>
+    
+    <div class="afri-product-card">
+        <div class="afri-product-image">
+            <img src="tamara.jpg" alt="Tamarin">
+        </div>
+        <div class="afri-product-details">
+            <p class="afri-product-type">Boissons - bouteille de 250 ml</p>
+            <h3 class="afri-product-name">Tamarin</h3>
+            <p class="afri-product-description">Cette boisson traditionnelle (250 ml), au goût sucré, acidulé et caramélisé, est riche en minéraux comme le calcium et le fer, ce qui favorise l'hydratation et la digestion.</p>
+            <ul class="afri-product-features">
+                <li>Livraison le jour J</li>
+                <li>Preparation artisanales</li>
+                <li>Riche en vitamines</li>
+            </ul>
+            <a href="../contact/contact.html" class="afri-btn afri-btn-catalogue"><b>Ajouter Au Panier</b></a>
+        </div>
+    </div>
+    
+    <br> <br> <br>
+    
+    <div class="afri-info-supplementary">
+        <div>
+            <a href="catalogueboisson.html" class="afri-btn afri-btn-info-one"><b>Nos boissons</b></a>
+            <a href="cataloguerepas.html" class="afri-btn afri-btn-info-two"><b>Nos repas</b></a>
+            <br>
+            <br>
+            <p class="afri-info-note
