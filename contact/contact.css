@@ -159,7 +159,7 @@ main h2 {
     border-color: #42ae5c;
 }
 
-.bouton {
+.button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +176,7 @@ main h2 {
     box-shadow: 0 4px 15px #dec22c;
 }
 
-.bouton:hover {
+.button:hover {
     background-color: #333;
 }
 footer {
