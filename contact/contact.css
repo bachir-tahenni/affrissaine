@@ -1,6 +1,6 @@
 /* =========================================
-   1. RESET & BASE
-   ========================================= */
+    1. RESET & BASE
+    ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -15,10 +15,10 @@ body {
 }
 
 /* =========================================
-   2. HEADER & NAV
-   ========================================= */
-header {
-    position: relative;      /* Permet au nav d'être centré indépendamment */
+    2. HEADER & NAV
+    ========================================= */
+.afri-entete {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 15px 50px;
@@ -28,22 +28,22 @@ header {
 }
 
 /* Logo collé à gauche */
-.logo img {
+.afri-logo img {
     height: 60px;
     width: 249px;
     display: block;
 }
 
 /* Nav centré par rapport à son propre centre */
-nav {
+.afri-navigation {
     position: sticky;
     left: 50%;
-    transform: translateX(-50%); /* Centre parfait */
+    transform: translateX(-50%);
     display: flex;
 }
 
 /* Liens */
-nav a {
+.afri-lien-navigation {
     align-items: center;
     text-decoration: none;
     color: black;
@@ -52,29 +52,22 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a.active {
+.afri-lien-actif {
     font-weight: bold;
     border-bottom: 2px solid black;
 }
 
-/* Logo collé à gauche */
-.logo img {
-    height: 60px;
-    width: 249px;
-    display: block;
-}
-
 /* Nav centré par rapport à son propre centre */
-nav {
-    position: relative;      /* Permet au nav d'être centré indépendamment */
+.afri-navigation {
+    position: relative;
     position: sticky;
     left: 50%;
-    transform: translateX(-50%); /* Centre parfait */
+    transform: translateX(-50%);
     display: flex;
 }
 
 /* Liens */
-nav a {
+.afri-lien-navigation {
     text-decoration: none;
     color: black;
     margin: 0 15px;
@@ -82,58 +75,186 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a.active {
+.afri-lien-actif {
     font-weight: bold;
     border-bottom: 2px solid black;
 }
 
 /* =========================================
-   3. MAIN & TITRES
-   ========================================= */
-main {
+    3. MAIN & TITRES
+    ========================================= */
+.afri-principal {
     text-align: center;
     padding: 40px 20px;
-    font-family: "Noto Sans Tifinagh Rhissa Ixa", Arial, sans-serif; 
+    font-family: "Noto Sans Tifinagh Rhissa Ixa", Arial, sans-serif;
     margin: 0 auto;
 }
 
-main h1, 
-main h2 {
+.afri-principal h1,
+.afri-principal h2 {
     font-family: serif;
     font-weight: normal;
     text-align: center;
     color: black;
 }
 
-main h1 {
+.afri-principal h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
 }
 
-main h2 {
+.afri-titre-page {
     font-size: 2.5em;
     margin-bottom: 30px;
 }
 
-.contact-header p {
+.afri-entete-contact p {
     font-size: 1.1em;
     margin-bottom: 50px;
     color: #555;
 }
 
-.hidden-title {
+.afri-titre-cache {
     display: none;
 }
 
 /* =========================================
-   4. SECTION INFO (MODIFIÉ POUR ALIGNEMENT GAUCHE/DROITE)
-   ========================================= */
-.contact-details-grid {
+    4. CATALOGUE PRODUIT
+    ========================================= */
+.afri-carte-produit {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.afri-image-produit {
+    flex: 0 0 40%;
+}
+
+.afri-image-produit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.afri-details-produit {
+    flex: 1;
+    padding: 25px;
+}
+
+.afri-type-produit {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.afri-nom-produit {
+    font-family: serif;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.afri-description-produit {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.afri-caracteristiques-produit {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.afri-caracteristiques-produit li {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+/* Boutons Catalogue et Devis */
+.afri-bouton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.afri-bouton:hover {
+    background-color: #333;
+}
+
+.afri-bouton-devis {
+    margin-left: auto;
+}
+
+.afri-bouton-catalogue {
+    background-color: #42ae5c;
+    box-shadow: 0 4px 15px #42ae5c;
+    font-weight: bold;
+}
+
+.afri-bouton-catalogue:hover {
+    background-color: #38974e;
+}
+
+.afri-informations-supplementaires {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 0;
+}
+
+.afri-bouton-info-un,
+.afri-bouton-info-deux {
+    padding: 15px 30px;
+    margin: 0 10px;
+}
+
+.afri-bouton-info-un {
+    background-color: #dec22c;
+    box-shadow: 0 4px 15px #dec22c;
+}
+
+.afri-bouton-info-un:hover {
+    background-color: #c9b126;
+}
+
+.afri-bouton-info-deux {
+    background-color: black;
+}
+
+.afri-note-info-un,
+.afri-note-info-deux {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+    5. FORMULAIRE DE CONTACT & DÉTAILS
+    ========================================= */
+.afri-grille-details-contact {
     text-align: center;
     flex-wrap: wrap;
     display: flex;
-    /* C'est ici que la magie opère : space-between écarte les colonnes */
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-start cen;
     gap: 50px;
     max-width: 900px;
@@ -144,19 +265,18 @@ main h2 {
     border-radius: 10px;
     text-align: left;
 }
-.contact-grid-title{
+.afri-titre-grille-contact{
     width: 100%;
 }
-/* Assure que les deux blocs (gauche et droite) prennent de la place équitablement */
-.detail-block {
+.afri-bloc-detail {
     flex: 1;
 }
 
-.detail-item {
+.afri-element-detail {
     margin-bottom: 25px;
 }
 
-.detail-content h3 {
+.afri-contenu-detail h3 {
     font-family: serif;
     font-size: 1.3em;
     margin-bottom: 5px;
@@ -164,29 +284,26 @@ main h2 {
     color: black;
 }
 
-.detail-content p, 
-.detail-content a {
+.afri-contenu-detail p,
+.afri-contenu-detail a {
     color: black;
     text-decoration: none;
     font-size: 1em;
 }
 
-.detail-content a:hover {
+.afri-contenu-detail a:hover {
     text-decoration: underline;
 }
 
-/* Ligne de séparation (optionnelle si tu ne l'utilises plus) */
-.separator-vertical {
+.afri-separateur-vertical {
     width: 1px;
     background-color: #eee;
     height: 200px;
     align-self: center;
 }
 
-/* =========================================
-   5. FORMULAIRE
-   ========================================= */
-.contact-form-minimal {
+/* FORMULAIRE */
+.afri-formulaire-contact {
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
@@ -196,21 +313,21 @@ main h2 {
     text-align: left;
 }
 
-.form-group {
+.afri-groupe-formulaire {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.form-group label {
+.afri-groupe-formulaire label {
     font-weight: bold;
     margin-bottom: 8px;
     color: black;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.afri-groupe-formulaire input,
+.afri-groupe-formulaire select,
+.afri-groupe-formulaire textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -220,15 +337,15 @@ main h2 {
     width: 100%;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.afri-groupe-formulaire input:focus,
+.afri-groupe-formulaire select:focus,
+.afri-groupe-formulaire textarea:focus {
     outline: none;
     border-color: #42ae5c;
 }
 
-/* BOUTON */
-.submit-button {
+/* BOUTON ENVOYER */
+.afri-bouton-soumettre {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -245,14 +362,14 @@ main h2 {
     box-shadow: 0 4px 15px #dec22c;
 }
 
-.submit-button:hover {
+.afri-bouton-soumettre:hover {
     background-color: #333;
 }
 
 /* =========================================
-   6. FOOTER
-   ========================================= */
-footer {
+    6. FOOTER
+    ========================================= */
+.afri-pied-de-page {
     background-color: #f9f9f9;
     color: #333;
     padding: 40px 20px;
@@ -261,7 +378,7 @@ footer {
     text-align: center;
 }
 
-.footer-bottom {
+.afri-bas-de-page {
     border-top: 1px solid #ddd;
     padding-top: 20px;
     display: flex;
@@ -269,35 +386,51 @@ footer {
     gap: 10px;
 }
 
-.footer-links a {
+.afri-liens-pied-de-page a {
     color: #555;
     text-decoration: none;
     margin: 0 10px;
 }
 
-.footer-links a:hover {
+.afri-liens-pied-de-page a:hover {
     color: #dec22c;
 }
 
 /* =========================================
-   7. RESPONSIVE (MOBILE)
-   ========================================= */
+    7. RESPONSIVE (MOBILE)
+    ========================================= */
 @media (max-width: 768px) {
-    .contact-details-grid {
-        flex-direction: column; /* Empile les colonnes sur mobile */
+    .afri-grille-details-contact {
+        flex-direction: column;
         gap: 30px;
     }
     
-    header {
+    .afri-entete {
         flex-direction: column;
         padding: 15px 20px;
     }
     
-    nav {
+    .afri-navigation {
         position: static;
         transform: none;
         margin-top: 15px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .afri-carte-produit {
+        flex-direction: column;
+    }
+
+    .afri-image-produit {
+        flex: 1 1 100%;
+        max-height: 250px;
+    }
+
+    .afri-bouton-info-un,
+    .afri-bouton-info-deux {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
     }
 }
