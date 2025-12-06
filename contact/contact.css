@@ -1,4 +1,5 @@
 * {
+    /* Reset de base */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,8 +11,12 @@ body {
     margin: 0;
     background-color: #fff;
 }
+
+/* =========================================
+   1. HEADER & NAVIGATION
+   ========================================= */
 header {
-    position: relative;      
+    position: relative;
     display: flex;
     align-items: center;
     padding: 15px 50px;
@@ -20,59 +25,29 @@ header {
     font-size: 1.1em;
 }
 
-/* Logo collé à gauche */
 .logo img {
     height: 60px;
     width: 249px;
     display: block;
 }
 
-/* Nav centré par rapport à son propre centre */
 nav {
-    position: sticky;
+    /* Centrage de la navigation */
+    position: absolute; /* Changé de 'sticky'/'relative' pour centrer dans le header */
     left: 50%;
-    transform: translateX(-50%); /* Centre parfait */
+    transform: translateX(-50%);
     display: flex;
+    /* La position sticky répétée a été supprimée ici */
 }
 
-/* Liens */
 nav a {
-    align-items: center;
+    /* Propriétés de base pour les liens de nav */
     text-decoration: none;
     color: black;
     margin: 0 15px;
     padding: 5px 0;
     transition: color 0.3s;
-}
-
-nav a.active {
-    font-weight: bold;
-    border-bottom: 2px solid black;
-}
-
-/* Logo collé à gauche */
-.logo img {
-    height: 60px;
-    width: 249px;
-    display: block;
-}
-
-/* Nav centré par rapport à son propre centre */
-nav {
-    position: relative;      /* Permet au nav d'être centré indépendamment */
-    position: sticky;
-    left: 50%;
-    transform: translateX(-50%); /* Centre parfait */
-    display: flex;
-}
-
-/* Liens */
-nav a {
-    text-decoration: none;
-    color: black;
-    margin: 0 15px;
-    padding: 5px 0;
-    transition: color 0.3s;
+    /* align-items: center; a été retiré car il est géré par 'header'/'nav' */
 }
 
 nav a.active {
@@ -81,16 +56,18 @@ nav a.active {
 }
 
 /* =========================================
-   3. MAIN & TITRES
+   2. MAIN CONTENT & TYPOGRAPHIE
    ========================================= */
 main {
     text-align: center;
     padding: 40px 20px;
-    font-family: "Noto Sans Tifinagh Rhissa Ixa", Arial, sans-serif; 
+    /* Attention à la police "Noto Sans Tifinagh Rhissa Ixa", elle doit être importée */
+    font-family: "Noto Sans Tifinagh Rhissa Ixa", Arial, sans-serif;
+    max-width: 1200px; /* Ajouté pour contrôler la largeur du contenu principal */
     margin: 0 auto;
 }
 
-main h1, 
+main h1,
 main h2 {
     font-family: serif;
     font-weight: normal;
@@ -119,15 +96,13 @@ main h2 {
 }
 
 /* =========================================
-   4. SECTION INFO (MODIFIÉ POUR ALIGNEMENT GAUCHE/DROITE)
+   3. SECTION INFO (GRILLE DE DÉTAILS)
    ========================================= */
 .contact-details-grid {
-    text-align: center;
-    flex-wrap: wrap;
+    /* Utilisation de flexbox pour l'alignement gauche/droite */
     display: flex;
-    /* C'est ici que la magie opère : space-between écarte les colonnes */
-    justify-content: space-between; 
-    align-items: flex-start cen;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 50px;
     max-width: 900px;
     margin: 0 auto 50px auto;
@@ -135,14 +110,19 @@ main h2 {
     background-color: white;
     box-shadow: 0 4px 15px #42ae5c;
     border-radius: 10px;
-    text-align: left;
+    text-align: left; /* Défini ici pour les éléments à l'intérieur */
+    flex-wrap: wrap; /* Assure le retour à la ligne sur mobile */
+    /* text-align: center; retiré car il est remplacé par text-align: left */
+    /* align-items: flex-start cen; corrigé en align-items: flex-start */
 }
-.contact-grid-title{
+
+.contact-grid-title {
     width: 100%;
 }
-/* Assure que les deux blocs (gauche et droite) prennent de la place équitablement */
+
 .detail-block {
-    flex: 1;
+    flex: 1; /* Permet aux blocs de prendre de l'espace équitablement */
+    min-width: 300px; /* Assure que les blocs ne deviennent pas trop petits */
 }
 
 .detail-item {
@@ -157,7 +137,7 @@ main h2 {
     color: black;
 }
 
-.detail-content p, 
+.detail-content p,
 .detail-content a {
     color: black;
     text-decoration: none;
@@ -168,7 +148,6 @@ main h2 {
     text-decoration: underline;
 }
 
-/* Ligne de séparation (optionnelle si tu ne l'utilises plus) */
 .separator-vertical {
     width: 1px;
     background-color: #eee;
@@ -177,7 +156,7 @@ main h2 {
 }
 
 /* =========================================
-   5. FORMULAIRE
+   4. FORMULAIRE
    ========================================= */
 .contact-form-minimal {
     max-width: 900px;
@@ -201,7 +180,10 @@ main h2 {
     color: black;
 }
 
-.form-group input,.form-group select,.form-group textarea {
+/* Regroupement des champs de formulaire */
+.form-group input,
+.form-group select,
+.form-group textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -211,10 +193,14 @@ main h2 {
     width: 100%;
 }
 
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus {
+/* Regroupement des états de focus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: #42ae5c;
 }
+
 .submit-button {
     display: inline-flex;
     justify-content: center;
@@ -235,6 +221,10 @@ main h2 {
 .submit-button:hover {
     background-color: #333;
 }
+
+/* =========================================
+   5. FOOTER
+   ========================================= */
 footer {
     background-color: #f9f9f9;
     color: #333;
@@ -263,21 +253,23 @@ footer {
 }
 
 /* =========================================
-   7. RESPONSIVE (MOBILE)
+   6. RESPONSIVE (MOBILE)
    ========================================= */
 @media (max-width: 768px) {
     .contact-details-grid {
-        flex-direction: column; /* Empile les colonnes sur mobile */
+        flex-direction: column;
         gap: 30px;
     }
-    
+
     header {
         flex-direction: column;
         padding: 15px 20px;
     }
     
+    /* Ajustement de la navigation sur mobile */
     nav {
-        position: static;
+        /* Remplacement des propriétés de centrage par défaut du header */
+        position: static; 
         transform: none;
         margin-top: 15px;
         flex-wrap: wrap;
